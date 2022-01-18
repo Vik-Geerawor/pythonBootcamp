@@ -1,4 +1,5 @@
 def test_strings():
+    print("\n *** STRINGS ***\n")
     print(r"C:\User\Vik")
 
     word = "Python"
@@ -12,3 +13,7 @@ def test_strings():
         -h		Display this usage message
         -H hostname	Hostname to connect to
     """)
+
+
+if __name__ == '__main__':
+    test_strings()
