@@ -1,16 +1,30 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from basics import hello_world
+from data_structures import size_of_type
+from data_structures.strings import strings
+from basics import operators
 
 
 def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    print(f'Hi, {name}')
 
 
-# Press the green button in the gutter to run the script.
+def basics_func():
+    hello_world.hello()
+    operators.addition(1, 2.0)
+    operators.subtraction(5.0, 3)
+
+
+def data_structure():
+    size_of_type
+    strings
+
+
+def run_strings_test():
+    strings.test_strings()
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    # print_hi('PyCharm')
+    # basics_func()
+    # data_structure()
+    run_strings_test()
