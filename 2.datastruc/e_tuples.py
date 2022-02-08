@@ -6,7 +6,7 @@ def basics():
     print(f"My tuple: {mytuple}")
     print(f"Element number 2: {mytuple[1]}")
 
-    # count no. of an element
+    # count no. of occurrences of an element
     print(f"Count of 'two': {mytuple.count('two')}")
 
     # find the index of an element

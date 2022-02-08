@@ -28,7 +28,7 @@ def string_test():
 
 
 if __name__ == '__main__':
-    print("*** Size of Data types ***")
+    print("\n*** Size of Data types ***")
     number_test()
     bool_test()
     string_test()
