@@ -62,7 +62,7 @@ def test_bool():
     print(f"3 <= 2: False - {3 <= 2}")
     print(f"3 == 2.0: False - {3 == 2.0}")
     print(f"3.0 == 3: False - {3.0 == 3}")          # TODO: incorrect
-    print(f"4**0.5 != 2: False - {4 ** 0.5 != 2}")    # TODO: incorrect
+    print(f"4 ** 0.5 != 2: False - {4 ** 0.5 != 2}")    # TODO: incorrect
 
 
 if __name__ == '__main__':
