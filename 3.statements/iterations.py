@@ -19,7 +19,7 @@ def while_loop():
     mylist1 = [1, 2, 3, 4, 5]
     i = 0
     while i < len(mylist1):
-        if mylist1[i] == 4:
+        if mylist1[i] == 4:     # exit condition
             break
         print(f"{mylist1[i]}")
 
@@ -28,7 +28,7 @@ def while_loop():
 
         i += 1
 
-        if mylist1[i] % 2 == 0:
+        if mylist1[i] % 2 == 0:     # skip condition
             continue
         print("Even number printed ^")
 
