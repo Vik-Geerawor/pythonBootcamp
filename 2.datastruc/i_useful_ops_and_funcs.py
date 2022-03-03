@@ -69,6 +69,11 @@ def input_demo():
     )
 
 
+def list_comprehension_demo():
+    odd_num = [x for x in range(1, 10) if x % 2 == 1]
+    print(f"{odd_num}")
+
+
 if __name__ == '__main__':
     print(f"*** USEFUL OPERATORS AND FUNCTIONS ***")
     # range_demo()
@@ -79,5 +84,6 @@ if __name__ == '__main__':
     # max_demo()
     # shuffle_demo()
     # randint_demo()
-    input_demo()
+    # input_demo()
+    list_comprehension_demo()
 
