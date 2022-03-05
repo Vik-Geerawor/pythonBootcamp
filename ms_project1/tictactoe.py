@@ -91,7 +91,6 @@ if __name__ == '__main__':
 
     # print(f"Testing: {player1[0]} and {player2[0]} are playing")
 
-
     # choose who wants to start
     current_player_name = get_first_player(player1, player2)
     if current_player_name == player1[0]:
@@ -118,7 +117,6 @@ if __name__ == '__main__':
             print(f"Position is taken {current_player[0]}")
             continue
         current_player = take_turn(current_player, player1, player2)
-
 
     # declare the result
     draw_board(myboard)
