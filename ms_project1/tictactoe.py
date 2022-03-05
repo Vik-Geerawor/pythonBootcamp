@@ -32,14 +32,6 @@ def reset_board(board):
     return board
 
 
-def play(player, position, board):
-    print(f"Playing the game")
-
-
-def declare_results():
-    print(f"Declaring the results")
-
-
 def position_clear(pos, myboard):
     idx = int(pos) - 1
     if myboard[idx] == ' ':
