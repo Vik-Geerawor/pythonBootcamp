@@ -81,8 +81,6 @@ if __name__ == '__main__':
     player1[0] = get_player_name(1)
     player2[0] = get_player_name(2)
 
-    # print(f"Testing: {player1[0]} and {player2[0]} are playing")
-
     # choose who wants to start
     current_player_name = get_first_player(player1, player2)
     if current_player_name == player1[0]:
