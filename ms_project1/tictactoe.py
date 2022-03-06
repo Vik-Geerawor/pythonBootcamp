@@ -70,6 +70,13 @@ def is_winner(myboard):
         return False
 
 
+def is_draw(myboard):
+    for pos in myboard:
+        if pos == ' ':
+            return False
+    return True
+
+
 if __name__ == '__main__':
     print(f"\n*** Welcome to the Tictactoe Game")
 
@@ -96,11 +103,11 @@ if __name__ == '__main__':
     while game_on:
         draw_board(myboard)
         pos = input(f"Enter a position 1 - 9 {current_player[0]}: ")
-        if int(pos) not in range(1, 9):
+        if int(pos) not in range(1, 10):
             continue
         if position_clear(pos, myboard):
             myboard = make_move(current_player, pos, myboard)
-            if is_winner(myboard):
+            if is_winner(myboard) or is_draw(myboard):
                 game_on = False
                 break
         else:
@@ -110,4 +117,7 @@ if __name__ == '__main__':
 
     # declare the result
     draw_board(myboard)
-    print(f"\n *** {current_player[0]} *** is the winner of this round..!")
+    if is_winner(myboard):
+        print(f"\n *** {current_player[0]} *** is the winner of this round..!")
+    elif is_draw(myboard):
+        print(f"\n *** Draw ***")
