@@ -2,6 +2,12 @@ import os
 import shutil
 
 
+def file_exists(path):
+    if os.path.isfile(path):
+        return True
+    else:
+        return False
+
 def write_file(text):
     with open('test_file.txt', 'a') as file:
         file.write(text)
@@ -46,8 +52,10 @@ def delete_file(path, option):
 if __name__ == '__main__':
     print(f"*** Files and Directories ***")
 
+    file = '/tmp/file1.txt'
+    print(f"{file} is a file: {file_exists(file)}")
     # write_file('A line of text\n')
     # list_files('/home/vik/Documents')
     # move_file('/tmp/test1/file1.txt', '/tmp/test3/sub1/file2.txt')
     # delete_file('/tmp/test3/sub1/file2.txt', 'f')
-    traverse_dir('/tmp/test1')
+    # traverse_dir('/tmp/test1')

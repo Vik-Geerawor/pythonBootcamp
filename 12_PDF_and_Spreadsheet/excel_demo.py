@@ -1,3 +1,5 @@
+import os.path
+
 import openpyxl
 
 
@@ -22,23 +24,35 @@ def read_sheet(sheet):
 
 def find_and_replace(wb, old, new):
 
-    rows = wb['Sheet1'].iter_rows()       # return generator class
+    for sheet_name in wb.sheetnames:
 
-    for row in rows:
-        # print(row)
-        for cell in row:
-            if cell.value == old:
-                cell.value = new
+        rows = wb[sheet_name].iter_rows()       # return generator class
+
+        for row in rows:
+            # print(row)
+            for cell in row:
+                if cell.value == old:
+                    cell.value = new
 
     return wb
 
 
 if __name__ == '__main__':
     # wb = create_workbook('test_spreadsheet.xlsx')
+    file = 'test_spreadsheet.xlsx'
 
-    wb = openpyxl.load_workbook('test_spreadsheet.xlsx')
-    print(wb.sheetnames)
+    # check if file exists
+    if os.path.isfile(file):
+        # load workbook
+        wb = openpyxl.load_workbook(file)
+        sheet_name = wb.sheetnames[0]
+        ws = wb[sheet_name]
+        print(ws.dimensions)
 
-    wb = find_and_replace(wb, 'John', 'Jim')
-    wb.save('test_spreadsheet.xlsx')
-    read_sheet(wb['Sheet1'])
+        # replace null values in all sheets
+        # wb = find_and_replace(wb, '[null]', '')
+
+        # save workbook
+        # wb.save(file)
+    else:
+        print(f"{file} is not a valid file. Please try again.")
