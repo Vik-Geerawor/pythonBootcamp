@@ -49,3 +49,4 @@ if __name__ == '__main__':
     func_name = func_two
     print(f"{func_name.__name__}: {timeit_demo(func_two)}")
 
+

@@ -8,6 +8,7 @@ def file_exists(path):
     else:
         return False
 
+
 def write_file(text):
     with open('test_file.txt', 'a') as file:
         file.write(text)
