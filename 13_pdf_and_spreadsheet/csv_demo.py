@@ -24,6 +24,11 @@ def write_file(filename, row):
         writer.writerow(row)
 
 
+def get_row(filename, row):
+    with open(filename, encoding='utf-8') as data:
+        csv_data = csv.reader(data)     # returns an iterable obj, not a list
+
+
 if __name__ == '__main__':
     print(f"*** CSV Builtin ***")
     # read_file('data.csv')
